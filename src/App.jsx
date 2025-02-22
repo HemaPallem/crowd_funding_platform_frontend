@@ -17,6 +17,13 @@ import DonationFailure from "./Routes/donationFailure";
 import Footer from "./Components/footer";
 import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
+import UserDashboard from "./Routes/userDashboard";
+import ExploreCampaigns from "./Routes/ExploreCampaigns";
+import AnonymousDonation from "./Routes/AnonymousDonation";
+import Profile from "./Routes/Profile";
+import FundDistribution from "./Routes/FundDistibution";
+import Music from "./Routes/Music";
+import Auth from "./Routes/Auth";
 
 const App = () => {
   return (
@@ -31,6 +38,15 @@ const App = () => {
               exact
               component={DonationSuccess}
             />
+            <Route path="/user/login" exact component={LoginUser} />
+            <Route path="/user/dashboard" exact component={UserDashboard} />
+            <Route path="/profile" exact component={Profile} />
+            <Route path="/explore" exact component={ExploreCampaigns} />
+            <Route path="/anonymous-donation" exact component={AnonymousDonation} />
+            <Route path="/admin/fund-distribution" exact component={FundDistribution} />
+            <Route path="/music" exact component={Music} />
+            <Route path="/auth" exact component={Auth} />
+
             <Route path="/donation/failure" exact component={DonationFailure} />
             <Route path="/campaign/:id" exact component={Campaign} />
             <Route path="/admin/login" exact component={LoginAdmin} />
